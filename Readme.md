@@ -1,7 +1,10 @@
 # Личный проект «Седона»
 
 * Студент: [Irina  Blatsky](https://up.htmlacademy.ru/htmlcss/39/user/2455731).
-* Наставник: `Неизвестно`.
+* Наставник: [Дарья Шестерина](https://htmlacademy.ru/profile/id221124).
+* Сайт: [Мой проект Седона](https://github.com/Irina0909/2455731-sedona-39).
+
+
 
 ---
 
