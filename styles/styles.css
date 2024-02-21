@@ -193,16 +193,22 @@ body {
 .advantages-list {
   display: flex;
   flex-wrap: wrap;
+  margin:0;
+  padding-left: 0;
   text-align:center;
 
 }
 
 .advantages-item {
   width: 400px;
+  text-align:center;
   background-color: #82B3D3;
 }
+
 .advantages-item-wide {
   width: 1200px;
+
+
 }
 
 
