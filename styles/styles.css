@@ -585,27 +585,23 @@ img {
 }
 .catalog-list {
   display:flex;
-  justify-content: flex-start;
   flex-wrap: wrap;
   padding-left: 70px;
   padding-right: 70px;
-  margin: 0;
+  gap: 20px;
   background-color: #ffffff;
   list-style: none;
 
 }
-.product-card {
+.catalog-item {
   width: 300px;
+
   padding: 20px;
   margin: 0;
-  margin-right: 20px;
-  margin-bottom: 20px;
   background-color: #ffffff;
 
 }
-.product-card:nth-child(3n) {
-  margin-right: 0;
-}
+
 
 .product-card-link {
   text-decoration: none;
