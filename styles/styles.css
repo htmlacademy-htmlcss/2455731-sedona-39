@@ -127,6 +127,7 @@ img {
 
 }
 .logo {
+  display: flex;
   width:140px;
   margin-right: 28px;
 
@@ -187,8 +188,8 @@ img {
   padding: 51px;
   padding-bottom: 82px;
   text-align:center;
-  background-image: url("../images/index-background.jpg");
   background-color: #f2f2f2;
+  background-image: url("../images/index-background.jpg");
   background-repeat:no-repeat;
   background-size: 100% auto;
 
@@ -395,10 +396,10 @@ img {
   padding-top: 96px;
   padding-bottom: 104px;
   text-align: center;
+  background-color: #f2f2f2;
   background-image: url("../images/background-subscribe.jpg");
   background-repeat:no-repeat;
   background-size: 100% auto;
-  background-color: #f2f2f2;
   color: #ffffff;
 
 }
@@ -499,8 +500,8 @@ img {
   padding: 35px 0 70px;
   margin: 0 auto;
   margin-bottom:50px;
-  background-image: url("../images/background-catalog.jpg");
   background-color: #f2f2f2;
+  background-image: url("../images/background-catalog.jpg");
   background-repeat:no-repeat;
   background-size: 100% auto;
 
@@ -584,6 +585,7 @@ img {
 }
 .catalog-header {
   display: flex;
+  justify-content: space-between;
   padding: 0;
   margin:0;
   margin-bottom: 40px;
@@ -604,12 +606,14 @@ img {
 
 .sorting-container {
   display: flex;
+
   width: 292px;
   font-size: 18px;
   line-height: 21px;
   font-weight: 400;
 
 }
+
 .sorting-container .button {
   display: block;
   width: 48px;
@@ -681,19 +685,15 @@ img {
   margin: 0;
   margin-top: 40px;
   padding:0;
-  list-style: none;
+  list-style-type: none;
   text-align: center;
 
 
 }
 .pagination-item {
   margin-right: 8px;
-  font-size: 20px;
-  line-height: 36px;
-  font-weight: 700;
-  background-color: #83B3D3;
-
 }
+
 
 .pagination-link {
   display:block;
@@ -702,7 +702,11 @@ img {
   min-height: 60px;
   padding-top: 11.36px;
   padding-bottom: 12.64px;
+  font-size: 20px;
+  line-height: 36px;
+  font-weight: 700;
   color: #ffffff;
+  background-color: #83B3D3;
   text-decoration: none;
 
 }
