@@ -86,8 +86,6 @@ img {
   border-radius: 4px;
   color: #ffffff;
   cursor: pointer;
-
-
 }
 .button-primary {
   background-color: #756157;
@@ -263,7 +261,7 @@ img {
   background-image: url("../images/background-hero-underpart.svg"), url("../images/index-background.jpg");
   background-size: 1200px  auto, cover;
   background-position: center bottom, center;
-  background-color: #2e4650;
+  background-color: #c2ccd3;
   padding-top: 51px;
   padding-right: 70px;
   padding-bottom: 82px;
@@ -505,7 +503,7 @@ img {
   padding-top: 96px;
   padding-bottom: 104px;
   text-align: center;
-  background-color: #f2f2f2;
+  background-color: #c2ccd3;
   background-image: url("../images/background-subscribe.jpg");
   background-repeat:no-repeat;
   background-size: 100% auto;
@@ -545,10 +543,12 @@ img {
 }
 
 .field {
-  padding: 14px 20px 14px 20px;
+  padding: 14px 20px;
   font-size: 18px;
   line-height: 24px;
   width: 100%;
+  background-color:  #f2f2f2;
+  border:none;
 
 }
 
@@ -631,7 +631,6 @@ img {
 }
 .footer-copyright:hover .copyright,
 .footer-copyright:focus .copyright {
-
   fill: #756157;
 }
 .footer-copyright:active .copyright {
@@ -640,7 +639,7 @@ img {
 .inner-header {
   padding: 35px 0 70px;
   margin: 0 auto 50px;
-  background-color: #f2f2f2;
+  background-color: #c2ccd3;
   background-image: url("../images/background-catalog.jpg");
   background-repeat:no-repeat;
   background-size: 100% auto;
@@ -721,12 +720,54 @@ img {
 .filter-item:not(:last-child) {
   margin-bottom:  16px;
 }
+.checkbox {
+ position: relative;
+ display: block;
+
+
+}
+.control-mark{
+  position: absolute;
+  width: 20px;
+  height: 19px;
+  border: 1px solid;
+  border-radius: 4px;
+}
+.checkbox:hover .control-mark {
+  color: rgba(255, 255, 255, 0.6);
+}
+.checkbox-input:disabled + .control-mark {
+ color: #fff;
+
+
+}
+
+.checkbox-input:after {
+  position: absolute;
+  content: "";
+  background-image: url("../images/icons/mark-icon.svg") ;
+  background-repeat: no-repeat;
+  width: 12px;
+  height: 10px;
+}
+
 .checkbox-label,
 .radio-label {
   color: #ffffff;
   font-size: 18px;
   line-height: 23px;
   font-weight: 400;
+  padding-left: 36px;
+}
+
+
+.checkbox:focus .checkbox-label,
+.checkbox-input:focus {
+  color: #ffffff;
+}
+.checkbox-label:disabled,
+.checkbox-input:disabled {
+   color: rgba(255, 255, 255, 0.3);
 }
 
 .filter-group-secondary {
@@ -735,29 +776,76 @@ img {
 }
 
 .catalog-filter-group  {
-  display: flex;
   margin: 0 70px 0 0;
   padding: 0;
   border: none;
 
 }
-
-.filter-range-control {
+.filter-range {
   display: flex;
-  line-height: 24px;
-  font-weight: 700;
-  padding:12px 100px 20px;
-  width: 143px;
-  border-radius: 4px 0 0 4px;
-  margin-bottom: 56px;
 
 }
+.filter-range-control{
+  display: flex;
+  justify-content: space-between;
 
-.filter-range-handle,
+
+}
+.range-input {
+  font: inherit;
+  padding:12px 50px 20px 12px;
+  width: 143px;
+  height: 24px;
+  border-radius: 4px 0 0 4px;
+  margin-bottom: 56px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 133%;
+  color: #000000;
+  background-color: #f2f2f2;
+
+}
+.range-input:hover,
+.range-input:focus {
+  background-color: #e6e6e6;
+}
+.range-scale {
+ position: relative;
+ height: 4px;
+ background-color: #ffffff;
+}
+.range-bar {
+  position: absolute;
+  height: 4px;
+  background-color: #ffffff;
+}
 .filter-range-toggle {
+ position: absolute;
+ height: 20px;
+ width: 20px;
+ background-color: #ffffff;
+ border-radius: 5px;
+ cursor: pointer;
+}
+.filter-range-toggle:hover {
+  background-color: #ffffff;
+}
+.filter-range-toggle:active {
+  background-color: #ffffff;
+  border: 2px solid #83b3d3;
+}
 
-  padding:0;
-  margin:0;
+.filter-range.toggle:focus {
+  background-color: #ffffff;
+  border: 3px solid #83b3d3;
+}
+.toggle-min {
+  top:-8px;
+  left: -61px;
+}
+.toggle-max {
+ top:-8px;
+ right: 240px;
 }
 .button-submit {
   min-width: 191px;
@@ -794,8 +882,6 @@ img {
 
 .sorting-container {
   display: flex;
-
-
 }
 .select-control {
   font-family: "PT Sans", sans-serif;
@@ -872,8 +958,6 @@ img {
   grid-template-columns: repeat(2, 140px);
   column-gap: 20px;
   row-gap: 16px;
-
-
 }
 .product-card-link {
   grid-column: 1/3;
@@ -934,19 +1018,26 @@ img {
   grid-row: 5 / 6;
   margin:0;
 
-  background-repeat: no-repeat;
-  width: 18px;
-  height: 17px;
-
 }
 .product-card-stars:before {
  background-image: url("../images/icons/star.svg");
  content: "";
  display: block;
+ width: 120px;
  height: 17px;
  background-size: contain;
  background-repeat: space no-repeat;
 
+}
+.star-4:before {
+ width: 89px;
+}
+.star-3:before {
+ width: 66px;
+
+}
+.star-2:before {
+  width: 42px;
 }
 .hotel-rating {
   width:140px;
@@ -975,7 +1066,7 @@ img {
 .pagination:before {
   position: absolute;
   content: "";
-  top: -20px;
+  top:0;
   width: 1060px;
   border: 1px solid  #e6e6e6;
 }
