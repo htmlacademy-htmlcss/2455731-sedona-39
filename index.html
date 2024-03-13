@@ -147,9 +147,8 @@
           <p class="subtitle-h3">Подпишитесь на рассылку</p>
           <p class="subscribe-text">Только полезная информация и никакого спама,<br> честное бойскаутское!</p>
           <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
-            <label style="flex-grow: 1;">
-              <input class="field" placeholder="Ваш e-mail" type="email" name="subscribe-email" required>
-            </label>
+            <label class="visually-hidden" for="subscribe-email">E-mail</label>
+              <input class="field" placeholder="Ваш e-mail" type="email" name="subscribe-email" id="subscribe-email" required>
             <button class="button button-secondary subscribe-button" type="submit">Подписаться</button>
           </form>
         </section>
@@ -185,6 +184,40 @@
       </a>
     </div>
     </footer>
+    </div>
+    <div class="modal-container">
+      <div class="modal modal-select-dates">
+        <button class="modal-close-button">
+          <span class="visually-hidden">Закрыть</span>
+        </button>
+        <section class="modal-content">
+          <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
+          <form class="select-dates-form" action="https://echo.htmlacademy.ru/" method="post">
+            <p class="field-group">
+              <label class="form-label" for="check-in-date">Дата заезда:</label>
+              <input class="check-in-form field" type="text" id="check-in-date" name="check-in-date" placeholder="27 апреля 2020">
+
+            </p>
+            <p class="error">Мы не можем отправить вас в прошлое.</p>
+
+            <p class="field-group">
+              <label class="form-label" for="check-out-date">Дата выезда:</label>
+              <input class="check-out-form field" type="text" id="check-out-date" name="check-out-date" placeholder="1 сентября 2021">
+
+            </p>
+            <p class="error">Мы не можем отправить вас в прошлое.</p>
+            <p class="field-group">
+              <label class="form-label" for="select-adults">Взрослые:</label>
+              <input class="select-guests-form" type="number" id="adults" name="adults" value="2">
+              <label class="form-label" for="select-children">Дети:</label>
+              <input class="select-guests-form" type="number" id="children" name="children" value="2">
+            </p>
+            <button class="button button-search-big" type="submit">Найти</button>
+          </form>
+        </section>
+      </div>
+
+
     </div>
   </body>
 </html>

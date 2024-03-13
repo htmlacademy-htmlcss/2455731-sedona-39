@@ -122,10 +122,10 @@
                 <legend class="filter-title-h2">Стоимость, ₽</legend>
                 <div class="filter-range">
                 <label class="filter-range-control">
-                  <input class="range-input" type="text" name="min-interval" value="0">от
+                  <input class="range-input" type="text" name="min-interval" value="0"> от
                 </label>
                 <label class="filter-range-control">
-                  <input class="range-input" type="text" name="max-interval" value="9000">до
+                  <input class="range-input" type="text" name="max-interval" value="9000"> до
                 </label>
                 </div>
 
@@ -156,11 +156,13 @@
           <div class="container">
           <header class="catalog-header">
             <h2 class="catalog-title">Найдено гостиниц: <span>38</span></h2>
+
             <select class="select-control" aria-label="Сортировка">
               <option value="cheap">Сначала дешевые </option>
               <option value="popular">Сначала популярные </option>
               <option value="expensive">Сначала дорогие</option>
             </select>
+
               <div class="sorting-container">
                 <a class="button-view button-view-current" href="#">
                 <svg class="sorting-cards" aria-hidden="true" focusable="false" width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#a)" fill="#000"><path d="M4 0H0v6h4V0ZM16 0h-4v6h4V0ZM10 0H6v6h4V0ZM4 8H0v6h4V8ZM16 8h-4v6h4V8ZM10 8H6v6h4V8Z"/></g><defs><clipPath id="a"><path fill="#fff" d="M0 0h16v14H0z"/></clipPath></defs></svg>
@@ -285,9 +287,8 @@
           <p class="subtitle-h3">Подпишитесь на рассылку</p>
           <p class="subscribe-text">Только полезная информация и никакого спама, честное бойскаутское!</p>
           <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post" >
-            <label style="flex-grow: 1;">
-             <input class="field" placeholder="Ваш e-mail" type="email" name="subscribe-email" required>
-            </label>
+            <label class="visually-hidden" for="subscribe-email">E-mail</label>
+             <input class="field" placeholder="Ваш e-mail" type="email" name="subscribe-email" id="subscribe-email" required>
             <button class="button button-secondary subscribe-button" type="submit">Подписаться</button>
           </form>
         </section>
