@@ -39,6 +39,7 @@
                   <span class="visually-hidden">
                   Избранное
                   </span>
+                  <span class="visually-hidden">12</span>
                 </a>
               </li>
               <li class="nav-item">
@@ -122,10 +123,12 @@
                 <legend class="filter-title-h2">Стоимость, ₽</legend>
                 <div class="filter-range">
                 <label class="filter-range-control">
-                  <input class="range-input" type="text" name="min-interval" value="0"> от
+                  <input class="range-input" type="text" name="min-interval" value="0" placeholder="0">
+                  <span class="min-interval">от</span>
                 </label>
                 <label class="filter-range-control">
-                  <input class="range-input" type="text" name="max-interval" value="9000"> до
+                  <input class="range-input range-input-secondary" type="text" name="max-interval" value="9000" placeholder="9000">
+                  <span class="max-interval">до</span>
                 </label>
                 </div>
 
@@ -140,11 +143,10 @@
                   </div>
                 </div>
               </fieldset>
-
               <div class="filter-buttons">
               <button class="button button-secondary button-submit" type="submit">Применить</button>
               <button class="button button-reset" type="reset">Сбросить</button>
-              </div>
+            </div>
               </form>
               </div>
             </div>
@@ -191,7 +193,7 @@
                   <h3 class="card-title">Amara Resort & Spa</h3>
                 </a>
                 <p class="product-card-text">Гостиница</p>
-                <p class="product-card-text-price">От 4000 ₽ </p>
+                <p class="product-card-text-price">От<span> 4000 </span> ₽ </p>
                 <a class="button button-primary card-button" href="#">Подробнее</a>
                 <button class="button button-secondary card-button-next">В избранное</button>
                 <p class="product-card-stars star-4"></p>
@@ -209,7 +211,7 @@
                 <h3 class="card-title">Villas at Poco Diablo</h3>
               </a>
               <p class="product-card-text">Гостиница</p>
-              <p class="product-card-text-price">От 5000 ₽ </p>
+              <p class="product-card-text-price">От<span> 5000 </span> ₽ </p>
               <a class="button button-primary card-button" href="#">Подробнее</a>
               <button class="button button-secondary card-button-next card-button-favorite">В избранном</button>
               <p class="product-card-stars star-4"></p>
@@ -227,7 +229,7 @@
                   <h3 class="card-title">Desert Quail Inn</h3>
                 </a>
                 <p class="product-card-text">Гостиница</p>
-                <p class="product-card-text-price">От 2500 ₽ </p>
+                <p class="product-card-text-price">От<span> 2500 </span>  ₽ </p>
                 <a class="button button-primary card-button" href="#">Подробнее</a>
                 <button class="button button-secondary card-button-next">В избранное</button>
                 <p class="product-card-stars star-3"></p>
@@ -245,7 +247,7 @@
                     <h3 class="card-title">GreenTree Inn</h3>
                   </a>
                   <p class="product-card-text">Гостиница</p>
-                  <p class="product-card-text-price">От 1500 ₽ </p>
+                  <p class="product-card-text-price">От<span> 1500 </span> ₽ </p>
                   <a class="button button-primary card-button" href="#">Подробнее</a>
                   <button class="button button-secondary card-button-next">В избранное</button>
                   <p class="product-card-stars star-2"></p>
