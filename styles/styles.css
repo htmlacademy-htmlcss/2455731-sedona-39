@@ -91,8 +91,9 @@ img {
 
 }
 .button-primary:hover,
-.button-primary:focus {
+.button-primary:focus-visible {
   background-color: #615048;
+  outline: none;
 }
 
 .button-primary:active {
@@ -110,11 +111,13 @@ img {
 
 }
 .button-secondary:hover,
-.button-secondary:focus,
+.button-secondary:focus-visible,
 .button-search-big:hover,
-.button-search-big:focus,
+.button-search-big:focus-visible,
 .button-search-big:active {
   background-color: #68a2ca;
+  outline: none;
+
 }
 .button-search-big:active {
  color: rgba(255, 255, 255, 0.3);
@@ -136,20 +139,21 @@ img {
 
 .button-reset:hover,
 .button-reset:active,
-.button-reset:disabled,
-.button-reset:focus {
+.button-reset:disabled {
   background-color: transparent;
+  outline: none;
 }
 .button-reset:hover {
   color: rgba(255, 255, 255, 0.6);
 }
-.button-reset:focus {
+.button-reset:focus-visible {
+  background-color: transparent;
   color: #fff;
-  border: 3px solid #83b3d3;
+  border-color: 3px solid #83b3d3;
 }
 .button-reset:active {
   color: rgba(255, 255, 255, 0.3);
-  border: transparent;
+
 }
 .button-reset:disabled {
   color: #fff;
@@ -549,7 +553,7 @@ img {
   border: none;
 
 }
-field:focus {
+.field:focus {
   outline: 3px solid  #83B3D3;
 }
 
@@ -649,17 +653,23 @@ field:focus {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.8);
+
 }
 .modal {
   position: relative;
   margin:auto;
   padding: 64px 70px;
   background-color: #ffffff;
+
 }
 .modal-select-dates {
   display:flex;
   flex-direction: column;
   width: 717px;
+  border-radius: 30px;
+
+
+
 }
 .modal-title {
   margin: 0 0 64px 0;
@@ -675,8 +685,6 @@ field:focus {
 .field-group {
   display: flex;
   justify-content:space-between;
-
-
 }
 
 .field-group .form-label {
@@ -686,18 +694,23 @@ field:focus {
   color:inherit;
   text-transform: capitalize;
   padding: 12px 0;
+  width: 137px;
 
 }
+
 .form-label-secondary {
   display: block;
   font-size: 16px;
   line-height: 21px;
   font-weight: normal;
   color: #FF5757;
-  margin: 0 120px 23px 137px;
+  margin: 4px 0 0 0;
   padding: 0 20px;
 }
-
+.field-group-content {
+  width: calc(100%-137px);
+  margin-bottom: 23px;
+}
 .field-group:active .input-field {
   background-color: #f2f2f2;
 
@@ -710,22 +723,22 @@ field:focus {
   outline: 3px solid #83B3D3;
 
 }
+.input-field:focus-visible {
+  outline: 3px solid #83B3D3;
+}
 .label-info {
   color: #333333;
   min-width: 371px;
-
-}
-.select-dates-form .field-group {
-  margin: 0;
 
 }
 .select-dates-form .input-form {
   background-image: url("../images/icons/calendar.svg");
   content: "";
   background-repeat: no-repeat;
-  background-position: center right;
+  background-position: center right 20px;
   padding: 12px 30px 12px 20px;
   width: 440px;
+
 
 }
 .field-group .input-field {
@@ -737,39 +750,66 @@ field:focus {
   background-color: #f2f2f2;
   border: none;
 }
-.input-form {
-  margin-bottom: 4px;
-}
+
 .select-guests-form {
-
-  width: 110px;
+  width: 31px;
   height: 48px;
-  padding-top: 14px;
-  padding-bottom: 14px;
   text-align: center;
+  border: none;
+  background-color: #f2f2f2;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 20px;
+  color: inherit;
 
 }
-.select-guests-form:after {
-  position: absolute;
-  content: "";
-  height: 14px;
-  width: 2px;
-  top: 5px;
+
+.counter-button {
+  width: 40px;
+  height: 48px;
+  padding: 0;
+  border: none;
+  color: #756157;
+
+}
+.minus-button {
+  background-image: url("../images/icons/minus.svg");
+  background-position: center;
+  background-repeat: no-repeat;
   left: 10px;
-  background-color: #000000;
+  border-bottom-left-radius: 4px;
+  border-top-left-radius: 4px;
+
 }
-.select-guests-form-primary {
-  margin-right: 88px;
+.plus-button {
+  background-image: url("../images/icons/plus.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  left: 10px;
+  border-bottom-right-radius: 4px;
+  border-top-right-radius: 4px;
+
 }
+
+
 .select-guests-form::-webkit-outer-spin-button,
 .select-guests-form::-webkit-inner-spin-button {
   appearance: none;
   margin: 0;
 }
-.form-label-icon {
-  position: relative;
-  padding-right: 26px;
+.counter {
+  display: flex;
+
 }
+
+.field-group-item {
+  position: relative;
+  display: flex;
+
+
+
+}
+
 .tooltip {
   position: absolute;
   margin: 0 10px;
@@ -789,7 +829,7 @@ field:focus {
   height: 100%;
   display: block;
 }
-.tooltip-toggle:hover .tooltip-icon
+.tooltip-toggle:hover .tooltip-icon,
 .tooltip-toggle:focus .tooltip-icon {
   color: #68A2CA;
 }
@@ -868,11 +908,11 @@ field:focus {
 .button-search-big {
   width: 577px;
   height: 60px;
-  margin: 0 auto;
+  margin: 48px auto 0;
   line-height: 24px;
   background-color: #83B3D3;
   color: #ffffff;
-  margin-top: 48px;
+
 }
 .inner-header {
   padding: 35px 0 70px;
@@ -918,15 +958,16 @@ field:focus {
 
 .breadcrumbs-link {
   display: block;
-  position: relative;
   text-decoration: none;
   color: inherit;
 }
-
+.breadcrumbs-item {
+  position: relative;
+}
 .breadcrumbs-link-home {
   color: #fff;
 }
-.breadcrumbs-link:after {
+.breadcrumbs-item:after {
   position: absolute;
   content: "";
   background: url("../images/icons/breadcrumbs.svg") 0 0 no-repeat;
@@ -935,6 +976,7 @@ field:focus {
   width: 8px;
   height: 20px;
   background-size: contain;
+
 }
 
 .filter {
@@ -990,11 +1032,8 @@ field:focus {
 
 .checkbox:focus .control-mark,
 .radio:focus .control-mark {
-  outline: 3px solid #83B3D3;
   background-color: rgba(255, 255, 255, 1);
 }
-
-
 
 .checkbox:active .control-mark,
 .radio:active .control-mark {
@@ -1004,7 +1043,7 @@ field:focus {
 .checkbox-input[type="checkbox"]:checked + .control-mark::after {
   position: absolute;
   content: "";
-  background-image: url("../images/icons/mark-icon.svg") ;
+  background-image: url("../images/icons/mark-icon.svg");
   background-repeat: no-repeat;
   width: 12px;
   height: 10px;
@@ -1022,6 +1061,9 @@ field:focus {
   padding-left: 36px;
 }
 
+.checkbox-input[type="checkbox"]:focus-visible + .control-mark {
+  outline: 3px solid #83B3D3;
+}
 .checkbox:hover .checkbox-label,
 .radio:hover .radio-label {
   color: rgba(255, 255, 255, 0.6);
@@ -1029,6 +1071,7 @@ field:focus {
 .checkbox:focus .checkbox-label,
 .radio:focus .radio-label {
   color: rgba(255, 255, 255, 1);
+
 }
 .checkbox:active .checkbox-label,
 .radio:active .radio-label {
@@ -1054,7 +1097,9 @@ field:focus {
   border-radius: 50%;
 
 }
-
+.radio-input[type="radio"]:focus-visible + .control-mark {
+  outline: 3px solid #83B3D3;
+}
 .catalog-filter-group  {
   margin: 0 70px 0 0;
   padding: 0;
@@ -1108,17 +1153,19 @@ field:focus {
   transform: translateX(-50%);
   opacity: 0.3;
   right: 12px;
-
 }
 
 .range-scale {
   position: relative;
   height: 4px;
   background-color: rgba(255, 255, 255, 0.3);
+
 }
 .range-bar {
   position: absolute;
   background-color: #ffffff;
+  width: 70%;
+  height: 100%;
 
 }
 .filter-range-toggle {
@@ -1137,22 +1184,24 @@ field:focus {
   border: 2px solid #83b3d3;
 }
 
-.filter-range.toggle:focus {
+.filter-range.toggle:focus-visible {
   background-color: #ffffff;
-  border: 3px solid #83b3d3;
+  outline-color: 3px solid #83b3d3;
 }
 .toggle-min {
   top:-8px;
-  left: -61px;
+  left: 0;
 }
 .toggle-max {
  top:-8px;
- right: 240px;
+ right: 60px;
 }
-
+.filter-buttons {
+  padding-top: 56px;
+}
 .button-submit {
   min-width: 191px;
-  margin-bottom: 32px;;
+  margin-bottom: 32px;
 
 }
 .button-reset {
@@ -1191,22 +1240,24 @@ field:focus {
   line-height: 21px;
   font-weight: normal;
   padding: 8px 25px 8px 20px;
-  height: 49px;
+  min-height: 49px;
   border: 2px solid #e5e5e5;
   border-radius: 4px;
   width: 292px;
   background-image: url("../images/icons/arrow.svg");
   background-repeat: no-repeat;
-  background-position: right center;
+  background-position: right 20px center;
   content: "";
   appearance: none;
   cursor: pointer;
 }
 
-.select-control:hover,
-.select-control:focus {
- border-color: #68A2CA;
-
+.select-control:hover {
+  outline: 2px solid #68A2CA;
+  border: none;
+}
+.select-control:focus-visible {
+  outline: 2px solid #68A2CA;
 }
 .select-control:disabled {
   border-color: rgba(0, 0, 0, 0.3);
@@ -1228,11 +1279,11 @@ field:focus {
  border-color:  #000000;
 }
 .button-view:hover,
-.button-view:focus {
+.button-view:active {
   border-color:  #000000;
 }
-.button-view:active {
-  border-color:  #68a2c2;
+.button-view:focus-visible {
+  outline-color: #68a2c2;
 
 }
 
@@ -1398,27 +1449,36 @@ field:focus {
   justify-content: center;
 
 }
-.pagination-link:hover,
-.pagination-link:focus {
-  background-color: #68A2CA;
-}
-.pagination-link:active {
-  background-color: #82B3D3;
-  color:rgba(255, 255, 255, 0.3);
-}
+
 .pagination-current {
   background-color: #f2f2f2;
   color: #000000;
-}
-.pagination-current:hover,
-.page-container:focus,
-.pagination-current:active {
- background-color: #f2f2f2;
+
 }
 .pagination-link-clear {
   color: #000000;
   background-color: #ffffff;
 }
+
+.pagination-link:hover,
+.pagination-link:focus-visible {
+  background-color: #68A2CA;
+  outline: 1px solid #62b3d3;
+}
+.pagination-link:active :not(.pagination-current),
+.pagination-link:active :not(.pagination-clear) {
+
+  background-color: #82B3D3;
+  color:rgba(255, 255, 255, 0.3);
+}
+
+.pagination-current:hover,
+.page-container:focus,
+.pagination-current:active {
+  background-color: #f2f2f2;
+  outline: none;
+}
+
 .pagination-link-clear:hover,
 .pagination-link-clear:focus,
 .pagination-link-clear:active {

@@ -194,24 +194,39 @@
         <section class="modal-content">
           <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
           <form id="select-dates-form" class="select-dates-form" action="https://echo.htmlacademy.ru/" method="post">
-            <p class="field-group">
+            <div class="field-group">
               <label class="form-label" for="check-in-date">Дата заезда:</label>
+              <div class="field-group-content">
               <input class="input-form input-field" type="text" id="check-in-date" name="check-in-date" value="27 апреля 2020" placeholder="27 апреля 2020" required>
-
-            </p>
-             <p class="form-label-secondary error">Мы не можем отправить вас в прошлое.</p>
-
-            <p class="field-group">
+              <p class="form-label-secondary">Мы не можем отправить вас в прошлое.</p>
+            </div>
+          </div>
+            <div class="field-group">
               <label class="form-label" for="check-out-date">Дата выезда:</label>
+              <div class="field-group-content">
               <input class="input-form input-field" type="text" id="check-out-date" name="check-out-date" value="1 сентября 2021" placeholder="1 сентября 2021" required>
-
-            </p>
-            <p class="form-label-secondary label-info">На эти даты есть свободные номера. Пока есть.</p>
-            <p class="field-group">
+                <p class="form-label-secondary label-info">На эти даты есть свободные номера. Пока есть.</p>
+            </div>
+            </div>
+            <div class="field-group">
+              <div class="field-group-item">
               <label class="form-label" for="select-form-dates-adults">Взрослые:</label>
-              <input class="select-guests-form input-field select-guests-form-primary" type="number" id="select-form-dates-adults" name="adults" value="2" required>
-              <span class="form-label form-label-icon">
-              <label class="form-label" for="select-form-dates-children">Дети:</label>
+              <div class="counter">
+                <button class="counter-button minus-button" type="button">
+                  <span class="visually-hidden">-</span>
+
+                </button>
+                 <input class="select-guests-form" type="number" id="select-form-dates-adults" name="adults" value="2" required>
+                 <button class="counter-button plus-button" type="button">
+                  <span class="visually-hidden">+</span>
+                 </button>
+              </div>
+              </div>
+            </div>
+
+              <div class="field-group">
+                <div class="field-group-item">
+              <label class="form-label" for="select-form-dates-children"><span>Дети:</span>
               <span class="tooltip">
                 <button class="tooltip-toggle" type="submit"aria-labelledby="tooltip-label-date">
                  <svg class="tooltip-icon" aria-hidden="true" focusable="false" width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="13" cy="13" r="13" fill="#83B3D3"/><path fill-rule="evenodd" clip-rule="evenodd" d="M12 7h2v2h-2V7Zm2 12h-2v-9h2v9Z" fill="#fff"/></svg>
@@ -220,9 +235,20 @@
                 <span class="tooltip-text" role="tooltip" id="tooltip-label-date">Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.
                 </span>
               </span>
-              </span>
-              <input class="select-guests-form input-field" type="number" id="select-form-dates-children" name="children" value="2" required>
-            </p>
+
+              </label>
+              <div class="counter">
+                <button class="counter-button minus-button" type="button">
+                  <span class="visually-hidden">-</span>
+                </button>
+
+              <input class="select-guests-form" type="number" id="select-form-dates-children" name="children" value="2" required>
+              <button class="counter-button plus-button" type="button">
+                <span class="visually-hidden">+</span>
+              </button>
+              </div>
+            </div>
+            </div>
             <button class="button button-search-big" type="submit">Найти</button>
           </form>
         </section>
