@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
     <link rel="stylesheet" href="styles/styles.css">
+    <link rel="icon" href="favicon.ico">
   </head>
   <body>
     <div class="page-container">
@@ -66,13 +67,13 @@
       <section class="advantages" data-test="advantages">
         <header class="advantages-header">
           <h2 class="visually-hidden">Преимущества.</h2>
-          <p class="subtitle-h2 subtitle-advantages">Седона — небольшой городок в Аризоне,
-            заслуживающий большего!</p>
+          <p class="subtitle-h2 subtitle-advantages">Седона — небольшой городок в Аризоне,<br>заслуживающий большего!</p>
+
             <p class="subtitle-description description-advantages">Рассмотрим причины, по которым Седона круче, чем Гранд-Каньон!</p>
         </header>
           <ul class="advantages-list">
             <li class="advantages-item advantages-item-wide">
-              <div class="advantages-card">
+              <div class="advantages-card advantages-card-primary">
               <h3 class="advantages-card-title advantages-card-title-white">Настоящий городок</h3>
               <p class="advantages-card-description advantages-card-description-white">Седона — не аттракцион для туристов, там течёт своя жизнь</p>
              </div>
@@ -89,7 +90,6 @@
               <h3 class="advantages-card-title">Красивая <br> дорога</h3>
               <p class="advantages-card-description">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
               </div>
-
             </li>
             <li class="advantages-item advantages-item-blue">
               <div class="advantages-card">
@@ -99,7 +99,7 @@
               </li>
             <li class="advantages-item advantages-item-wide item-reverse">
               <img class="advantages-img" src="images/grand-canyon.jpg" alt="Красные горы с кустарниками" width="800" height="385">
-              <div class="advantages-card">
+              <div class="advantages-card advantages-card-primary">
               <h3 class="advantages-card-title advantages-card-title-white">Там есть <br> мост дьявола</h3>
               <p class="advantages-card-description advantages-card-description-white">Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
               </div>
@@ -109,24 +109,24 @@
 
         <!--Рекомендации-->
 
-        <section class="recommends">
+        <section class="recommends" data-test="recommends">
           <header class="recommends-header">
           <h2 class="visually-hidden">Рекомендации</h2>
-        <p class="subtitle-h2 subtitle-recommends">Приезжайте в Седону отдохнуть в комфорте и уюте!</p>
+        <p class="subtitle-h2 subtitle-recommends">Приезжайте в Седону отдохнуть<br> в комфорте и уюте!</p>
           <p class="subtitle-description description-recommends">Опытный персонал и качественное обслуживание!</p>
           </header>
           <ul class="recommends-list">
             <li class="recommends-item recommends-icon recommends-item-housing">
               <h3 class="recommends-title">Жильё</h3>
-              <p class="recommends-text">Рекомендуем пожить в настоящем мотеле,всё как в кино!</p>
+              <p class="recommends-text">Рекомендуем пожить <br> в настоящем мотеле,<br>всё как в кино!</p>
             </li>
             <li class="recommends-item recommends-icon recommends-item-burger">
               <h3 class="recommends-title">Еда</h3>
-              <p class="recommends-text">Всегда заказывайте топовый фирменный бургер, вы не разочаруетесь!</p>
+              <p class="recommends-text">Всегда заказывайте <br> топовый фирменный бургер,<br> вы не разочаруетесь!</p>
             </li>
             <li class="recommends-item recommends-icon recommends-item-gift">
               <h3 class="recommends-title">Сувениры</h3>
-              <p class="recommends-text">Не только китайского, но и настоящего местного производства!</p>
+              <p class="recommends-text">Не только китайского,<br> но и настоящего местного<br> производства!</p>
 
             </li>
           </ul>
@@ -210,38 +210,30 @@
             </div>
             <div class="field-group">
               <div class="field-group-item">
-              <label class="form-label" for="select-form-dates-adults">Взрослые:</label>
+              <label class="form-label form-label-primary" for="select-form-dates-adults">Взрослые:</label>
               <div class="counter">
                 <button class="counter-button minus-button" type="button">
                   <span class="visually-hidden">-</span>
-
                 </button>
                  <input class="select-guests-form" type="number" id="select-form-dates-adults" name="adults" value="2" required>
                  <button class="counter-button plus-button" type="button">
                   <span class="visually-hidden">+</span>
                  </button>
               </div>
-              </div>
             </div>
-
-              <div class="field-group">
                 <div class="field-group-item">
-              <label class="form-label" for="select-form-dates-children"><span>Дети:</span>
+              <label class="form-label form-label-primary" for="select-form-dates-children"><span>Дети:</span>
               <span class="tooltip">
-                <button class="tooltip-toggle" type="submit"aria-labelledby="tooltip-label-date">
-                 <svg class="tooltip-icon" aria-hidden="true" focusable="false" width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="13" cy="13" r="13" fill="#83B3D3"/><path fill-rule="evenodd" clip-rule="evenodd" d="M12 7h2v2h-2V7Zm2 12h-2v-9h2v9Z" fill="#fff"/></svg>
-
+                <button class="tooltip-toggle" type="submit" aria-labelledby="tooltip-label-date">
                 </button>
                 <span class="tooltip-text" role="tooltip" id="tooltip-label-date">Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.
                 </span>
               </span>
-
               </label>
               <div class="counter">
                 <button class="counter-button minus-button" type="button">
                   <span class="visually-hidden">-</span>
                 </button>
-
               <input class="select-guests-form" type="number" id="select-form-dates-children" name="children" value="2" required>
               <button class="counter-button plus-button" type="button">
                 <span class="visually-hidden">+</span>
@@ -253,8 +245,6 @@
           </form>
         </section>
       </div>
-
-
     </div>
   </body>
 </html>
