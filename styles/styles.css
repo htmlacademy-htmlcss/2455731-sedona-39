@@ -235,21 +235,21 @@ img {
 }
 
 .nav-actions-link-favorite {
-  background-image: url("../images/icons/heart.svg");
   position: relative;
+  background-image: url("../images/icons/heart.svg");
 }
-.nav-actions-link-favorite:after {
+
+.number {
   position: absolute;
   content: "";
   width: 20px;
   height: 20px;
   border-radius: 50%;
   background-color: #7db54f;
-  background-image: url("../images/icons/number.svg");
-  background-repeat: no-repeat;
-  background-position: center;
   left: 50%;
   top: 20%;
+  color: #ffffff;
+
 }
 
 .nav-button {
@@ -654,6 +654,7 @@ img {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.8);
+  display:none;
 }
 
 .modal {
@@ -672,7 +673,7 @@ img {
 
 .modal-title {
   margin: 0 0 64px;
-  font-family: "PT Sans", sans-serif;
+  font-family: inherit;
   font-size: 30px;
   line-height: 36px;
   font-weight: 700;
@@ -744,6 +745,7 @@ img {
 }
 
 .field-group .input-field {
+  font-family: inherit;
   font-size: 18px;
   line-height: 24px;
   font-weight: 700;
