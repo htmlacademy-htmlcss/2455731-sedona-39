@@ -25,8 +25,6 @@ html {
 }
 
 body {
-  display: flex;
-  flex-direction: column;
   min-height: 100%;
   margin: 0;
   font-family: "PT Sans","Arial", sans-serif;
@@ -53,6 +51,8 @@ img {
 }
 
 .page-container {
+  display: flex;
+  flex-direction: column;
   width: 1200px;
   margin: 0 auto;
   background-color: #ffffff;
@@ -236,6 +236,9 @@ img {
   background-size: 20px 20px;
 }
 
+.nav-actions-link:hover {
+  opacity: 0.3;
+}
 .nav-actions-link-search {
   background-image: url("../images/icons/search.svg");
 }
@@ -638,7 +641,8 @@ img {
 }
 
 .about-phone:active {
-  color: rgba(255, 255, 255, 0.3);
+  color: #756157;
+  opacity: 0.3;
 }
 
 .footer-copyright {
@@ -666,7 +670,6 @@ img {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.8);
-  display: none;
 }
 
 .modal {
@@ -838,15 +841,14 @@ img {
   fill: rgba(117, 97, 87, 0.3);
 }
 
-.select-guests-form::-webkit-outer-spin-button,
-.select-guests-form::-webkit-inner-spin-button {
-  appearance: none;
-  margin: 0;
+.select-guests-form[type="number"] {
+  -moz-appearance: textfield;
+
 }
 
 
-.select-guests-form::-moz-outer-spin-button,
-.select-guests-form::-moz-inner-spin-button {
+.select-guests-form::-webkit-outer-spin-button,
+.select-guests-form::-webkit-inner-spin-button {
   appearance: none;
   margin: 0;
 }
@@ -1335,8 +1337,7 @@ img {
 }
 
 .select-control:hover {
-  outline: 2px solid #68A2CA;
-  border: none;
+  border: 2px solid #68A2CA;
 }
 
 .select-control:focus-visible {
