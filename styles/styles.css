@@ -672,6 +672,9 @@ img {
   background-color: rgba(0, 0, 0, 0.8);
 }
 
+.modal-form-closed {
+  display: none;
+}
 .modal {
   position: relative;
   margin: auto;
