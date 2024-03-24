@@ -799,6 +799,13 @@ img {
   cursor: pointer;
 }
 
+.counter-button:hover,
+.counter-button:focus {
+  background-color: #f2f2f2;
+  color:#000000;
+
+}
+
 .counter-button:focus-visible {
   outline: 3px solid #82B3D3;
 }
@@ -813,17 +820,13 @@ img {
   border-top-right-radius: 4px;
 }
 
+
 .minus-button {
   position: absolute;
   fill: rgba(117, 97, 87, 0.3);
   content: "";
   top: 23px;
   left: 13px;
-}
-
-.minus-button:hover,
-.minus-button:focus {
-  fill: #000000;
 }
 
 .plus-button {
@@ -834,27 +837,16 @@ img {
   left: 13px;
 }
 
-.plus-button:hover,
-.plus-button:focus {
-  fill: #000000;
-}
-
-.minus-button:active,
-.plus-button:active {
-  fill: rgba(117, 97, 87, 0.3);
-}
-
 .select-guests-form[type="number"] {
   -moz-appearance: textfield;
-
 }
-
 
 .select-guests-form::-webkit-outer-spin-button,
 .select-guests-form::-webkit-inner-spin-button {
   appearance: none;
   margin: 0;
 }
+
 .counter {
   display: flex;
 }
@@ -941,10 +933,6 @@ img {
   fill: #000000;
 }
 
-.close-button:active {
-  fill: rgba(117, 97, 87, 0.3);
-}
-
 .modal-close-button::before {
   transform: rotate(45deg);
 }
@@ -965,6 +953,8 @@ img {
 .modal-close-button:active {
   background-color: #e6e6e6;
   outline: none;
+  color: #000000;
+  opacity: 0.3;
 }
 
 .button-search-big {
@@ -1337,6 +1327,7 @@ img {
   content: "";
   appearance: none;
   cursor: pointer;
+  background-color: #ffffff;
 }
 
 .select-control:hover {
