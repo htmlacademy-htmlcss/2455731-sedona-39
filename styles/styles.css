@@ -1107,13 +1107,14 @@ img {
 }
 
 .checkbox:hover,
-.radio:hover  {
+.radio:hover {
   opacity: 0.6;
 }
 
-.checkbox:disabled .control-mark,
-.radio:disabled .control-mark {
-  background-color: #e5e5e5;
+.checkbox:has(.checkbox-input:disabled),
+.radio:has(.radio-input:disabled) {
+  opacity: 0.3;
+  pointer-events: none;
 }
 
 .checkbox:focus .control-mark,
